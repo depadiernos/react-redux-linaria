@@ -1,0 +1,1 @@
+Practice setting up a react/redux/linaria app from scratch using webpack.
