@@ -1,6 +1,7 @@
-import { createStore, combineReducers } from "redux"
-import * as reducers from "./reducers"
+import { createStore, applyMiddleware } from "redux"
+import { composeWithDevTools } from "redux-devtools-extension"
+import todos from "./reducers/todos-reducer"
 
-const rootReducers = combineReducers(reducers)
+const store = createStore(todos, composeWithDevTools(applyMiddleware()))
 
-const store = createStore(rootReducers)
+export default store

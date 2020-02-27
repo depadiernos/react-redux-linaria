@@ -1,12 +1,17 @@
 import React from "react"
 import ReactDOM from "react-dom"
+import { Provider } from "react-redux"
 import { styled } from "linaria/react"
+
+import store from "./store"
 
 const App = () => {
   return (
-    <Style>
-      <h1>Hello World!</h1>
-    </Style>
+    <Provider store={store}>
+      <Style>
+        <h1>Hello World!</h1>
+      </Style>
+    </Provider>
   )
 }
 
